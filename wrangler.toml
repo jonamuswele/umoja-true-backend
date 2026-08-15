@@ -1,6 +1,7 @@
 name = "umoja-backend"
 main = "src/index.js"
 compatibility_date = "2024-04-01"
+compatibility_flags = ["nodejs_compat"]
 
 # Cloudflare D1 Database binding
 [[d1_databases]]
