@@ -1,20 +1,22 @@
 {
-  "name": "umoja-backend-hono",
+  "name": "umoja-terra-backend",
   "version": "1.0.0",
-  "description": "Ultra-fast Hono JS backend for Umoja Terra Real Estate",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "dev": "node src/server-node.js",
-    "start": "node src/server-node.js",
-    "seed": "node src/seed.js",
-    "deploy": "wrangler deploy"
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "db:setup": "node src/migrate.js",
+    "deploy": "wrangler deploy",
+    "cf:dev": "wrangler dev"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
+    "better-sqlite3": "^11.8.1",
     "hono": "^4.6.14"
   },
   "devDependencies": {
-    "wrangler": "^3.107.2"
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "wrangler": "^3.99.0"
   }
 }
